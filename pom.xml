@@ -53,6 +53,11 @@
 			<version>1.18.30</version>
 			<scope>provided</scope>
 		</dependency>
+<!--	supports hypermedia in response output-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-hateoas</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
