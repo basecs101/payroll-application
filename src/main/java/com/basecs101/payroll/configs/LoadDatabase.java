@@ -1,5 +1,7 @@
-package com.basecs101.payroll;
+package com.basecs101.payroll.configs;
 
+import com.basecs101.payroll.model.Employee;
+import com.basecs101.payroll.repository.EmployeeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
@@ -15,8 +17,8 @@ class LoadDatabase {
     CommandLineRunner initDatabase(EmployeeRepository repository) {
 
         return args -> {
-            log.info("Preloading " + repository.save(new Employee("Komal", "HR")));
-            log.info("Preloading " + repository.save(new Employee("Bhagyashree", "Admin")));
+            log.info("Preloading " + repository.save(new Employee("Komal","Bankar",  "HR")));
+            log.info("Preloading " + repository.save(new Employee("Bhagyashree","Survavanshi", "Admin")));
         };
     }
 }

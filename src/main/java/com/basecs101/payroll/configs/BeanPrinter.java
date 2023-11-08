@@ -1,4 +1,4 @@
-package com.basecs101.configs;
+package com.basecs101.payroll.configs;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;

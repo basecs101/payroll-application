@@ -1,13 +1,16 @@
-package com.basecs101.payroll;
+package com.basecs101.payroll.assembler;
 
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
+import com.basecs101.payroll.controller.EmployeeController;
+import com.basecs101.payroll.model.Employee;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.stereotype.Component;
 
 @Component
+public
 class EmployeeModelAssembler implements RepresentationModelAssembler<Employee, EntityModel<Employee>> {
 
     @Override

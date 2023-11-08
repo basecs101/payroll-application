@@ -1,4 +1,4 @@
-package com.basecs101.payrollapplication;
+package com.basecs101.payroll.payrollapplication;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
