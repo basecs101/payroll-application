@@ -4,21 +4,21 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-
-import java.util.Objects;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Table(name = "Employee")
+@NoArgsConstructor
+@EqualsAndHashCode
+@ToString
 public class Employee {
-
     private @Id @GeneratedValue Long id;
     private String name;
     private String firstName;
     private String lastName;
     private String role;
-
-    Employee() {
-    }
 
     public Employee(String name, String role) {
 
@@ -41,7 +41,6 @@ public class Employee {
         return this.firstName + " " + this.lastName;
     }
 
-
     public String getRole() {
         return this.role;
     }
@@ -58,50 +57,20 @@ public class Employee {
         } else {
             this.firstName = parts[0];
         }
-
     }
-
-
     public void setRole(String role) {
         this.role = role;
     }
-
     public String getFirstName() {
         return firstName;
     }
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-
     public String getLastName() {
         return lastName;
     }
-
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Employee employee)) return false;
-        return Objects.equals(id, employee.id) && Objects.equals(name, employee.name) && Objects.equals(firstName, employee.firstName) && Objects.equals(lastName, employee.lastName) && Objects.equals(role, employee.role);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, firstName, lastName, role);
-    }
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", role='" + role + '\'' +
-                '}';
     }
 }
